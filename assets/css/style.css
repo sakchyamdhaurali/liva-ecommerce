@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+   :root{   
+            --background: #fcfcfc;
+            --primary-color: #2c5346;
+            --secondary-color: #6bb19a ;
+            --text-dark: #1a1a1a;
+            --text-light: #4c4d4f;
+            --accent-color: #13c1fe;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding-inline: 0.5rem;
+
+}
+
+.flashsale{
+    /* background-color: var(--secondary-color); */
+    /* color: rgb(230, 190, 31); */
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        var(--primary-color),
+        rgb(230, 190, 31),
+        purple
+
+    );
+    background-clip: text;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+/*HEADER SECTION*/
+header{
+    padding-block: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.055);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+
+
+
+}
+
+.header-items{
+   
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+nav{
+    display: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 0.25rem 0.5rem;
+    transition: 0.5s;
+}
+
+nav a:hover{
+    color: var(--primary-color);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h1{
+    font: 1.5rem;
+    background: linear-gradient(
+        to right,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color: transparent;
+    background-clip: text;
+} 
+
+.cart{
+
+    padding: 0.25rem 1rem 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #efefef;
+    color: white;
+    height: auto;
+    
+
+}
+
+.cart span{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.5rem;
+    border-radius: 0.5rem;
+    
+}
+
+/*Footer SECTION*/
+
+
+footer{
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+
+}
+
+/*SECTION*/
+
+
+
+section{
+    padding-block: 2rem;
+    min-height: 80vh;
+}
+
+/*Hero Section */
+
+.hero-box{
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 2rem;
+      
+     
+}
+
+
+.hero-box img{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px 6px rgba(0,0,0,0.2);
+}
+
+
+.hero-content p{
+    color: #1a1a1a;
+    padding-block: 1rem;
+    text-align: justify;
+}
+
+.hero-content h1 {
+    color: var(--primary-color);
+}
+
+.shop-btn{
+    background-color: var(--primary-color);
+    border: none;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.explore-btn{
+    background-color: var(--background);
+    border: 1px solid var(--primary-color);
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-inline: 0.5rem;
+    /* box-shadow: 2px 3px 5px  #000; */
+}
+
+
+.shop-btn:hover{
+    background-color: var(--background);
+    box-shadow: 2px 3px 5px  #000;
+    color: var(--primary-color);
+}
+
+.explore-btn:hover{
+    background-color: var(--primary-color);
+    color: var(--background);
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(min-width:768px){
+    nav{
+        display: flex;
+        gap: 0.5rem 0.5rem;
+    }
+
+    .hero-box{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+    }
+
+}
+
+
+
+@media(min-width:1200){
+ 
+
+    .hero-box{
+       gap: 4rem;
+
+    }
+
+    .hero-content h1{
+        font-size: 3rem;
+    }
+
+    
+
+
+}
+
