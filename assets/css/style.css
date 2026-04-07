@@ -311,14 +311,51 @@ margin-bottom: 2rem;
 }
 
 .featured-box .card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 16px rgba(0,0,0,0.5);
+   
+}
+
+.featured-box .card img{
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+
+.featured-box .card .content .price{
+    margin-block: 0.25rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.featured-box .card .content{
+    background-color: white;
+    padding: 0.75rem 1rem 1rem;
+
+}
+
+.featured-box .card .content button{
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--background);
+    transition:  all 0.3s ease;
+    cursor: pointer;
+
 }
 
 
+.featured-box .card .content button:hover{
+    background-color: var(--primary-color);
+}
 
 
 
@@ -334,6 +371,10 @@ margin-bottom: 2rem;
 @media(min-width:512px){
     .benefits-box{
         grid-template-columns: 1fr 1fr;
+    }
+
+    .featured-box{
+       grid-template-columns: 1fr 1fr;
     }
 
 }
@@ -358,6 +399,10 @@ margin-bottom: 2rem;
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .featured-box{
+       grid-template-columns: repeat(3, 1fr);
+    }
+
 }
 
 
@@ -374,6 +419,9 @@ margin-bottom: 2rem;
         font-size: 3.5rem;
     }
 
+    .featured-box{
+       grid-template-columns: repeat(4, 1fr);
+    }
 
 
 
